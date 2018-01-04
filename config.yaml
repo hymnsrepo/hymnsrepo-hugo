@@ -4,16 +4,14 @@ theme: lanyon
 languageCode: en-US
 canonifyurls: true
 pluralizelisttitles: false
-
+footnoteReturnLinkContents: "↩"
 
 params:
   siteurl:      https://hymnsrepo.com/
   tagline:      A catholic hymn repository
   description:  A repository of hymns and songs used in catholic settings.
 
-blackfriday:
-  extensions:
-    - hardLineBreak
+
 
 disableKinds:
   - taxonomy
