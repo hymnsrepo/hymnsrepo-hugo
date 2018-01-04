@@ -10,7 +10,7 @@ params:
   siteurl:      https://hymnsrepo.com/
   tagline:      A catholic hymn repository
   description:  A repository of hymns and songs used in catholic settings.
-
+  cachebuster:  v0
 
 
 disableKinds:
