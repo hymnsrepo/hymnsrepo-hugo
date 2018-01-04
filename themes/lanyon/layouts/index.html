@@ -1,0 +1,11 @@
+{{ define "content" }}
+
+<ul>
+{{ range .Pages.ByTitle }}
+    <li class="hymn-list-item">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+{{ end }}
+</ul>
+
+{{end}}

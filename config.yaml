@@ -19,7 +19,6 @@ disableKinds:
   - taxonomy
   - taxonomyTerm
   - RSS
-  - home
 
 sitemap:
   changefreq: monthly
