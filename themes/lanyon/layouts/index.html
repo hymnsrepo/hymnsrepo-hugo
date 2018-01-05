@@ -2,9 +2,11 @@
 
 <ul>
 {{ range .Pages.ByTitle }}
-    <li class="hymn-list-item">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </li>
+    {{ if eq .Type "hymns" }}
+        <li class="hymn-list-item">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+    {{ end }}
 {{ end }}
 </ul>
 
