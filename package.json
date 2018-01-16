@@ -1,0 +1,13 @@
+{
+    "name": "hymnsrepo-hugo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      
+    },
+    "devDependencies": {
+      "gulp": "3.9.1",
+      "sw-precache": "^5.2.0"
+    }
+  }
+  
