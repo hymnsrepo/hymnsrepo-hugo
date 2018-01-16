@@ -3,4 +3,4 @@
 yarn
 gulp generate-sw
 mv service-worker.js public/
-hugo --baseURL https://hymnsrepo.com
+hugo --baseURL https://hymnsrepo.github.io/hymnsrepo-hugo
