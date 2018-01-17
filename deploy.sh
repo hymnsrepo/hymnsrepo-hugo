@@ -21,5 +21,8 @@ cd ..
 ./build.sh
 
 # Cleanup
-git clean -f # see https://stackoverflow.com/a/64966
-git checkout -- .
+if [ -z "$TRAVIS_BUILD_ID" ] # Not on travis
+then
+  git clean -f # see https://stackoverflow.com/a/64966
+  git checkout -- .
+fi
