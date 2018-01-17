@@ -12,9 +12,10 @@ cache:
     - node_modules
 
 before_script:
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.tar.gz
-  - tar -xf hugo*.tar.gz
-  - export PATH=$PATH:$PWD/hugo_0.27.1_Linux-64bit/
+  - wget -O ~ https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.tar.gz
+  - tar -xf ~/hugo*.tar.gz
+  - export PATH=$PATH:~/hugo_0.27.1_Linux-64bit/
+  - hugo version
   - yarn global add gulp
 
 script:
