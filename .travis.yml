@@ -3,7 +3,7 @@ node_js:
   - "lts/*"
 
 dist: trusty
-sudo: required
+sudo: false
 
 cache:
   bundler: true
@@ -12,8 +12,9 @@ cache:
     - node_modules
 
 install:
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.deb
-  - sudo dpkg -i hugo*.deb
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.tar.gz
+  - tar -xf hugo*.tar.gz
+  - export PATH=$PATH:$PWD/hugo_0.27.1_Linux-64bit/
   - yarn global add gulp
 
 script:
