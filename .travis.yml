@@ -3,6 +3,7 @@ node_js:
   - "lts/*"
 
 dist: trusty
+sudo: required
 
 cache:
   bundler: true
