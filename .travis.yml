@@ -13,7 +13,7 @@ cache:
 
 before_script:
   - wget -O ~/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.27.1/hugo_0.27.1_Linux-64bit.tar.gz
-  - mkdir ~/hugo tar -xf ~/hugo.tar.gz --directory ~/hugo
+  - mkdir ~/hugo && tar -xf ~/hugo.tar.gz --directory ~/hugo
   - export PATH=$PATH:~/hugo/
   - ls -l ~
   - ls -l ~/hugo/
