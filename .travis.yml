@@ -17,9 +17,11 @@ before_script:
   - export PATH=$PATH:$PWD/hugo_0.27.1_Linux-64bit/
   - yarn global add gulp
 
+script:
+  - ./deploy.sh
+
 deploy:
   provider: pages
-  script: deploy.sh
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: public
