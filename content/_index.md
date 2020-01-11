@@ -1,3 +1,3 @@
 ---
-is_home: true
+
 ---
