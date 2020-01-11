@@ -1,7 +1,7 @@
 {{ define "content" }}
 
 <ul>
-{{ range .Pages.ByTitle }}
+{{ range .Site.RegularPages.ByTitle }}
     {{ if eq .Type "hymns" }}
         <li class="hymn-list-item">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
