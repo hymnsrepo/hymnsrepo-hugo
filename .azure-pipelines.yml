@@ -1,0 +1,20 @@
+trigger:
+- master
+
+pr:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- script: |
+    wget -O ~/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz
+    mkdir ~/hugo && tar -xf ~/hugo.tar.gz --directory ~/hugo
+    export PATH=$PATH:~/hugo/
+    hugo version
+  displayName: 'Install hugo'
+
+- script: ./build.sh
+  displayName: 'Build'
