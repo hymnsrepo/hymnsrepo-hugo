@@ -1,0 +1,22 @@
+trigger:
+- master
+
+pr:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- script: |
+    wget -O ~/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.deb
+    sudo dpkg -i ~/hugo.deb
+    hugo version
+  displayName: 'Install hugo'
+
+- script: ./build.sh
+  displayName: 'Build'
+
+- script: gulp deploy
+  displayName: 'Deploy'

@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#AC4142">
   
     <title>
-      {{ if .Page.Params.is_home }}
+      {{ if .IsHome }}
         {{ .Site.Title }} &middot; {{ .Site.Params.tagline }}
       {{ else }}
         {{ .Page.Title }} &middot; {{ .Site.Title }}

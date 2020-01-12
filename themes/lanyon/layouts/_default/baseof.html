@@ -26,7 +26,16 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-    <script src="/service-worker-registration.js"></script>
+
+    <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+    </script>
     <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
