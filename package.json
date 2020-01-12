@@ -6,8 +6,8 @@
     "generate-apis": "./node_modules/.bin/m2j -o ./public/api/index.json -w 0 ./content/hymns/*.md"
   },
   "devDependencies": {
+    "@justeat/gulp-gh-pages": "^1.0.3",
     "gulp": "^4.0.2",
-    "gulp-gh-pages": "^0.5.4",
     "markdown-to-json": "^0.5.1",
     "workbox-build": "^4.3.1"
   }
