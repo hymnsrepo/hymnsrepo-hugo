@@ -17,3 +17,6 @@ steps:
 
 - script: ./build.sh
   displayName: 'Build'
+
+- script: gulp deploy
+  displayName: 'Deploy'

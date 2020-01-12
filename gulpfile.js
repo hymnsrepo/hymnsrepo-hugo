@@ -1,5 +1,6 @@
 const gulp = require('gulp');
-workbox = require('workbox-build');
+const workbox = require('workbox-build');
+const ghPages = require('gulp-gh-pages');
 
 gulp.task('generate-sw', () => {
   return workbox.generateSW({
@@ -19,4 +20,9 @@ gulp.task('generate-sw', () => {
   }).catch((error) => {
     console.warn('Service worker generation failed:', error);
   });
+});
+ 
+gulp.task('deploy', function() {
+  return gulp.src('./public/**/*')
+    .pipe(ghPages());
 });
