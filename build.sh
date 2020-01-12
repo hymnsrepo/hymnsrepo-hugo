@@ -10,7 +10,7 @@ if ! git diff-index --quiet HEAD --; then
 fi
 
 # Clone the content repo (content branch)
-git clone -b content --depth 1 https://github.com/hymnsrepo/hymnsrepo-site.git $STAGE_DIR
+git clone -b content --depth 1 https://github.com/hymnsrepo/hymnsrepo-site.git $STAGE_DIR/hymnsrepo-site
 
 # Move the files in position
 rm -rf ./content/hymns/ || exit 0
