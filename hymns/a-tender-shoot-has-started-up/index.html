@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
   
-    <link rel="apple-touch-icon" sizes="180x180" href="https://hymnsrepo.github.io/hymnsrepo-hugo/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://hymnsrepo.github.io/hymnsrepo-hugo/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://hymnsrepo.github.io/hymnsrepo-hugo/favicon-16x16.png">
-    <link rel="manifest" href="https://hymnsrepo.github.io/hymnsrepo-hugo/manifest.json">
-    <link rel="mask-icon" href="https://hymnsrepo.github.io/hymnsrepo-hugo/safari-pinned-tab.svg" color="#ac4142">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ac4142">
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="theme-color" content="#AC4142">
@@ -21,10 +21,10 @@
     </title>
   
     
-    <link rel="stylesheet" href="https://hymnsrepo.github.io/hymnsrepo-hugo/public/css/poole.css?v0">
-    <link rel="stylesheet" href="https://hymnsrepo.github.io/hymnsrepo-hugo/public/css/syntax.css?v0">
-    <link rel="stylesheet" href="https://hymnsrepo.github.io/hymnsrepo-hugo/public/css/lanyon.css?v0">
-    <link rel="stylesheet" href="https://hymnsrepo.github.io/hymnsrepo-hugo/public/css/site.css?v0">
+    <link rel="stylesheet" href="/public/css/poole.css?v0">
+    <link rel="stylesheet" href="/public/css/syntax.css?v0">
+    <link rel="stylesheet" href="/public/css/lanyon.css?v0">
+    <link rel="stylesheet" href="/public/css/site.css?v0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
     
   </head>
@@ -45,15 +45,15 @@
     
 
     <nav class="sidebar-nav">
-        <a class="sidebar-nav-item" href="https://hymnsrepo.github.io/hymnsrepo-hugo/">Home</a>
-        <a class="sidebar-nav-item" href="https://hymnsrepo.github.io/hymnsrepo-hugo/about/">About</a>
-        <a class="sidebar-nav-item" href="https://hymnsrepo.github.io/hymnsrepo-hugo/order-of-mass/">The Order of Mass</a>        
+        <a class="sidebar-nav-item" href="/">Home</a>
+        <a class="sidebar-nav-item" href="/about/">About</a>
+        <a class="sidebar-nav-item" href="/order-of-mass/">The Order of Mass</a>        
         
         <a class="sidebar-nav-item" href="https://github.com/hymnsrepo/hymnsrepo-site">GitHub project</a>
     </nav>
 
     <div class="sidebar-item">
-        <p>Last updated on 21 Jun 2018</p>
+        <p>Last updated on 12 Jan 2020</p>
     </div>
 </div>
 
@@ -63,7 +63,7 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="https://hymnsrepo.github.io/hymnsrepo-hugo/" title="Home">HymnsRepo</a>
+            <a href="//" title="Home">HymnsRepo</a>
             <small>A catholic hymn repository</small>
           </h3>
         </div>
@@ -74,20 +74,19 @@
     <div class="page">
     <h1 class="page-title">A tender shoot has started up</h1>
     <span class="post-subtitle">Otto Goldschmidt</span>
-        <p>A tender shoot has started up<br />
-From a root of grace,<br />
-As ancient seers imparted<br />
-From Jesse’s holy race;<br />
-It blooms without a blight,<br />
-Blooms in the cold bleak winter,<br />
+        <p>A tender shoot has started up<br>
+From a root of grace,<br>
+As ancient seers imparted<br>
+From Jesse’s holy race;<br>
+It blooms without a blight,<br>
+Blooms in the cold bleak winter,<br>
 Turning our darkness into light.</p>
-
-<p>This shoot, Isaiah taught us,<br />
-From Jesse’s root should spring;<br />
-The Virgin Mary brought us<br />
-The branch of which we sing:<br />
-Our God of endless might<br />
-Gave her this child to save us,<br />
+<p>This shoot, Isaiah taught us,<br>
+From Jesse’s root should spring;<br>
+The Virgin Mary brought us<br>
+The branch of which we sing:<br>
+Our God of endless might<br>
+Gave her this child to save us,<br>
 Thus turning darkness into light.</p>
 
     </div>
@@ -97,7 +96,16 @@ Thus turning darkness into light.</p>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-    <script src="https://hymnsrepo.github.io/hymnsrepo-hugo/service-worker-registration.js"></script>
+
+    <script>
+    
+    if ('serviceWorker' in navigator) {
+      
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+    </script>
     <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
